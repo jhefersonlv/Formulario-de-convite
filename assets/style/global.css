@@ -5,15 +5,36 @@
     --baloo-2: "Baloo 2", sans-serif;
     --open-sans: "Open Sans", sans-serif;
 
-    --h1: bold 1.75rem/auto var(--baloo-2);
-    --h2: bold 1.125rem/auto var(var(--baloo-2));
+    --h1: bold 1.75rem var(--baloo-2);
+    --h2: bold 1.125rem var(--baloo-2);
 
-    --txt-md: 500 1rem/auto var(--open-sans);
-    --txt-sm: 500 .875rem/auto var(--open-sans);
-    --txt-xs: 500 .75rem/auto var(--open-sans);
+    --txt-md: 500 1rem var(--open-sans);
+    --txt-sm: 500 .875rem var(--open-sans);
+    --txt-xs: 500 .75rem var(--open-sans);
 
     /* CORES */
 
-    
+    /* textos */
+    --txt-heading: #f9f9f9;
+    --txt-body: #c8cdd0;
+
+    /* accent colors */
+    --pink: #ff598b;
+
+    /* shape */
+    --shape-background: #131516;
+    --shape-body: #212427;
+    --shape-button: #2d3136;
+    --shape-hover: #383d42;
 
 }
+
+ h1 {
+    font: var(--h1);
+    color: var(--txt-heading);
+    }
+
+h2 {
+    font: var(--h2);
+    color: var(--txt-heading);
+   }
