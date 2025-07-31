@@ -26,8 +26,52 @@
         <header>
             <h1>Crie seu convite</h1>
             <form action="">
-                <h2>Sobre o evento</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, unde. Cum voluptatibus inventore, provident architecto deserunt reiciendis odio quo beatae quaerat earum dolorem? Temporibus, labore vero quod suscipit reprehenderit natus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, nihil fugit aliquid dolores incidunt quos ex rem ipsa dicta tempora unde laudantium error obcaecati similique debitis quam commodi iure odit?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non aperiam, iusto obcaecati culpa mollitia, consequatur blanditiis eveniet dolorum, iure sed voluptatem similique. Quae quis quibusdam, suscipit accusantium tempore perspiciatis porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas modi hic molestias perferendis ex, sapiente doloremque, inventore eius nihil accusantium quisquam mollitia, velit dolorum dolores voluptatibus quae eligendi temporibus dolor. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste distinctio blanditiis, ratione praesentium corporis et voluptatem nobis voluptas. Iusto sequi ex exercitationem facilis culpa animi minus rem distinctio quae voluptas.</p>
+                <fieldset>
+                    <h2 class="about">Sobre o evento</h2>
+                    <div class="form-wrap">
+                    <label for="title">Título</label>
+                    <input type="text" placeholder="Nome do evento">
+                    </div>
+                    
+                    <div>
+                        <div class="form-wrap">
+                            <label for="date-start">Início</label>
+                            <input type="datetime-local" id="date-start" name="date-start">
+                        </div>
+                        <div class="form-wrap">
+                            <label for="date-end">Fim</label>
+                            <input type="text" id="date-end" name="date-end">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-wrap">
+                            <label for="segment">Tipo</label>
+                            <div><input type="radio" name="segment" value="in-person">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                            <label for="online">Presencial</label>
+                            </div>
+                            
+                            <div>
+                            <input type="radio" name="segment" value="online">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                            <label for="online">Online</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-wrap">
+                            <label for="address">Local</label>
+                            <input type="text" id="address" name="address" placeholder="Link ou endereço">
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="description"></label>
+                            <input type="text" id="description" name="description">
+                        </div>
+
+                    </div>
+
+                </fieldset>
             </form>
         </header>
     </main>

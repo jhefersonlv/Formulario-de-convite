@@ -5,15 +5,15 @@ body {
     display: grid;
     grid-template-columns: 32.8% 67.2%;
     overflow: hidden;
-}
+    background-color: var(--shape-body);
 
-aside {
-    padding: 2rem 2rem 0 2rem;
-    background-image: url(../Background.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: var(--txt-heading);
+    aside {
+        padding: 2rem 2rem 0 2rem;
+        background-image: url(../Background.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        color: var(--txt-heading);
 
     header {
 
@@ -27,14 +27,17 @@ aside {
 
         p {
             font: 300 1rem var(--open-sans);
+            color: aliceblue;
         }
     }
 }
 
 
 main {
-    overflow: auto;
-    background-color: var(--shape-body);
+    
     padding: 2rem 8.125rem;
-
+    max-width: 31.25rem;
+    overflow: auto;
+    height: 100vh;
+}
 }
