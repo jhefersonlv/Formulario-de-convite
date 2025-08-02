@@ -1,28 +1,29 @@
 body {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 32.8% 67.2%;
-    overflow: hidden;
     background-color: var(--shape-body);
-
-    aside {
-        padding: 2rem 2rem 0 2rem;
+    overflow: hidden;
+}
+ 
+aside {
         background-image: url(../Background.png);
         background-size: cover;
         background-position: center;
-        height: 100vh;
         color: var(--txt-heading);
 
     header {
+
+        margin: 2rem;
 
         h1 {
             font-family: "leckerli one", coursive;
             font-size: 2.5rem;
             font-weight: 400;
             color: var(--pink);
-            margin: 1rem 0 0;
         }
 
         p {
@@ -34,10 +35,12 @@ body {
 
 
 main {
-    
-    padding: 2rem 8.125rem;
-    max-width: 31.25rem;
     overflow: auto;
     height: 100vh;
 }
+
+#app {
+    padding: 5rem ;
+    max-width: 35rem;
 }
+

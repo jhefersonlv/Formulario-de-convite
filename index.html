@@ -15,6 +15,7 @@
     <title>Formulario de convite</title>
 </head>
 <body>
+
     <aside>
         <header>
             <img src="assets/logo.svg" alt="Icone de festa">
@@ -23,57 +24,207 @@
         </header>
     </aside>
     <main>
+    <div id="app">
         <header>
             <h1>Crie seu convite</h1>
-            <form action="">
+        </header>
+            <form action="" class="grid gap-48">
                 <fieldset>
                     <h2 class="about">Sobre o evento</h2>
                     <div class="form-wrap">
                     <label for="title">Título</label>
-                    <input type="text" placeholder="Nome do evento">
+                    <input type="text" id="title" name="title" placeholder="Nome do evento">
                     </div>
                     
-                    <div>
+                    <div class="grid grid-auto-flow-col gap-16">
                         <div class="form-wrap">
                             <label for="date-start">Início</label>
                             <input type="datetime-local" id="date-start" name="date-start">
                         </div>
                         <div class="form-wrap">
                             <label for="date-end">Fim</label>
-                            <input type="text" id="date-end" name="date-end">
+                            <input type="datetime-local" id="date-end" name="date-end">
                         </div>
                     </div>
 
-                    <div>
+                    <div class="grid grid-auto-flow-col gap-16 grid-1fr-1fr">
                         <div class="form-wrap">
                             <label for="segment">Tipo</label>
-                            <div><input type="radio" name="segment" value="in-person">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-                            <label for="online">Presencial</label>
-                            </div>
                             
-                            <div>
-                            <input type="radio" name="segment" value="online">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
-                            <label for="online">Online</label>
+                            <div class="segment-selection">
+                                <div class="radio-wrapper-segment">
+                                <input type="radio" name="segment" value="in-person" id="in-person">
+                                <label for="in-person"><svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                                Presencial</label>
+                                </div>
+                                
+                                <div class="radio-wrapper-segment">
+                                <input type="radio" name="segment" value="online" id="online">
+                                <label for="online"><svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                                Online</label>
+                                </div>
+                            
                             </div>
+
                         </div>
                         
                         <div class="form-wrap">
                             <label for="address">Local</label>
                             <input type="text" id="address" name="address" placeholder="Link ou endereço">
                         </div>
+    
+                    </div>
 
-                        <div class="form-wrap">
-                            <label for="description"></label>
-                            <input type="text" id="description" name="description">
-                        </div>
-
+                    <div class="form-wrap">
+                        <label for="description">Descrição</label>
+                        <textarea type="text" id="description" name="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                       
                     </div>
 
                 </fieldset>
+
+                <fieldset>
+                    <h2 class="custom">Personalização</h2>
+
+                    <div class="form-wrap">
+                        <label for="main-color">Cor Principal</label>
+                            <div class="grid grid-auto-flow-col gap-12"> 
+
+                                <div class="radio-wrapper-color"> 
+                                    <input type="radio" name="main-color" value="brand-light" id="brand-light">
+                                    <label for="brand-light" style="--color: var(--brand-light)"></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="navy" id="navy">
+                                    <label for="navy" style="--color: var(--navy)"></label>
+                                </div>
+
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="purple" id="purple">
+                                    <label for="purple" style="--color: var(--purple);"></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="fuschia" id="fuschia">
+                                    <label for="fuschia" style="--color: var(--fuschia);"></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="pink" id="pink">
+                                    <label for="pink" style="--color: var(--pink);"></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="danger" id="danger">
+                                    <label for="danger" style="--color: var(--danger);"></label>
+                                </div>
+                                
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="orange" id="orange">
+                                    <label for="orange" style="--color: var(--orange);"></label>
+                                </div>
+                                
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="yellow" id="yellow">
+                                    <label for="yellow" style="--color: var(--yellow);"></label>
+                                </div>
+                                
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="lime" id="lime">
+                                    <label for="lime" style="--color: var(--lime);"></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="green" id="green">
+                                    <label for="green" style="--color: var(--green); "></label>
+                                </div>
+
+                                <div class="radio-wrapper-color">
+                                    <input type="radio" name="main-color" value="cyan" id="cyan">
+                                    <label for="cyan" style="--color: var(--cyan);"></label>
+                                </div>
+
+                            </div>
+                    </div>
+
+                    <div>
+                        <label>Tema do evento</label>
+                        <div class="theme">
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" value="birthday" id="birthday">
+                                <label for="birthday"><img src="assets/Image-01.png" alt="imagem de festa de Aniversário">Aniversário</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" value="kids" id="kids"><label for="kids"><img src="assets/Image-02.png" alt="imagem de festa de Infantil">Infantil</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" value="graduation" id="graduation"><label for="graduation">
+                                <img src="assets/Image-03.png" alt="imagem de festa de formatura">Formatura</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" id="marriage" value="marriage">
+                                <label for="marriage"><img src="assets/Image-04.png" alt="imagem de festa de Casamento">Casamento</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" id="baby-shower" value="baby-shower">
+                                <label for="baby-shower"><img src="assets/Image-05.png" alt="imagem de festa de Chá de bebe">Cha de bebê</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" id="bridal-shower" value="bridal-shower">
+                                <label for="bridal-shower">
+                                <img src="assets/Image-06.png" alt="imagem de festa de Cha de panela">Chá de panela</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" id="carnival" value="carnival">
+                                <label for="carnival">
+                                <img src="assets/Image-07.png" alt="imagem de festa de Carnaval">Carnaval</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                <input type="radio" name="theme" id="easter" value="easter">
+                                <label for="easter">
+                                <img src="assets/Image-08.png" alt="imagem de festa de Pascoa">Páscoa</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                 <input type="radio" name="theme" id="saint-john" value="saint-john">
+                                <label for="saint-john">
+                                <img src="assets/Image-09.png" alt="imagem de festa de São João">São João</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                 <input type="radio" name="theme" id="halloween" value="halloween">
+                                <label for="halloween">
+                                <img src="assets/Image-10.png" alt="imagem de festa de Halloween">Halloween</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                 <input type="radio" name="theme" id="christmas" value="christmas">
+                                <label for="christmas">
+                                <img src="assets/Image-11.png" alt="imagem de festa de natal">Natal</label>
+                            </div>
+
+                            <div class="theme-wrapper">
+                                 <input type="radio" name="theme" id="others" value="others">
+                                <label for="others">
+                                <img src="assets/Image-12.png" alt="imagem de festa diversas">Outro</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
             </form>
-        </header>
+    </div>
     </main>
 </body>
 </html>

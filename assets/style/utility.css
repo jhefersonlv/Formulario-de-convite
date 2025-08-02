@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+}
+
+.grid-auto-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-1fr-1fr {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gap-04 {
+    gap: .25rem;
+}
+
+.gap-12 {
+    gap: .75rem;
+}
+
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-48 {
+    gap: 3rem;
+}

@@ -9,23 +9,48 @@
     --h2: bold 1.125rem var(--baloo-2);
 
     --txt-md: 500 1rem var(--open-sans);
-    --txt-sm: 500 .875rem var(--open-sans);
+    --txt-sm: 300 .875rem var(--open-sans);
     --txt-xs: 500 .75rem var(--open-sans);
 
     /* CORES */
+    
+    /* Accent Colors */
+    --purple: #b259ff;
+    --fuschia: #ff59f9;
+    --pink: #ff598b;
+    --orange: #ff8b59;
+    --yellow: #ffcd59;
+    --lime: #e1ff59;
+    --green: #59ff91;
+    --cyan: #59fff9;
+    --navy: #6a59ff;
+
 
     /* textos */
     --txt-heading: #f9f9f9;
     --txt-body: #c8cdd0;
 
-    /* accent colors */
-    --pink: #ff598b;
+    /* Brand */
+    --brand-light: #59b2ff;
+    --brand-mid: #3487cf;
+    --brand-dark: #1d6fb6;
+
+
+    /* Input */
+    --input-base: #1c1f21;
+    --input-stroke: #363b40;
+    --input-placeholder: #869198;
 
     /* shape */
     --shape-background: #131516;
     --shape-body: #212427;
     --shape-button: #2d3136;
     --shape-hover: #383d42;
+    
+    /* Feedback */
+
+    --danger: #ff5959;
+    
 
 }
 
@@ -39,6 +64,14 @@ h2 {
     color: var(--txt-heading);
    }
 
-p {
-    
+fieldset {
+    padding: 0;
+    border: none;
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font: var(--txt-sm);
+    color: var(--txt-body);
 }
