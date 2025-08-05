@@ -10,6 +10,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.grid-1fr-2fr {
+    grid-template-columns: 1fr 2fr;
+}
+
 .gap-04 {
     gap: .25rem;
 }
@@ -20,6 +24,10 @@
 
 .gap-16 {
     gap: 1rem;
+}
+
+.gap-28 {
+    gap: 1.75rem;
 }
 
 .gap-48 {

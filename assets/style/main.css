@@ -168,3 +168,106 @@
 .theme-wrapper:has(input:checked) {
     box-shadow: inset 0 0 0 .125rem var(--brand-light) ;
 }
+
+.toggle-checkbox {
+
+    margin-top: .75rem;
+    align-items: center;
+    justify-content: start;
+
+
+    input[type=checkbox]{
+    }
+
+
+
+    .slider {
+        display: flex;
+        align-items: center;
+        padding: 0 .25rem;
+        background-color: var(--input-base);
+        width: 4rem;
+        height: 2rem;
+        border-radius: 68.4375rem;
+        border: 1px solid var(--input-stroke);
+        position: relative;
+        transition: transform 0.3s ease;
+
+
+        label {
+            position: absolute;
+        }
+
+        .toggle-ball {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: var(--input-stroke);
+            transition: transform 0.3s ease;
+
+        }
+
+        .label-toggle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+    }
+    
+    .dark {
+            display: none;
+        }
+
+    .slider:has(input:checked){
+
+        background-color: var(--brand-light);
+
+        .toggle-ball {
+            background-color: var(--txt-heading);
+            transform: translateX(2.5rem);
+        }
+    }
+
+    .slider + label::after {
+        content: "Escuro";
+        transition: transform 0.3s ease;
+    }
+
+    .slider:has(input:checked) + label::after{
+
+       content: "Claro";
+    }
+}
+
+.upload-file {
+    margin-top: .75rem;
+
+    input {
+        display: none;
+    }
+
+    div {
+       
+        display: grid;
+        grid-auto-flow: column;
+
+        label {
+        width: 7.4375rem;
+        height: 2.5rem;
+        background-color: var(--shape-button);
+        position: relative;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+           
+        }
+    }
+}

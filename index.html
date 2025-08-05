@@ -150,7 +150,7 @@
                             </div>
                     </div>
 
-                    <div>
+                    <div class="grid gap-28">
                         <label>Tema do evento</label>
                         <div class="theme">
 
@@ -219,8 +219,29 @@
                                 <label for="others">
                                 <img src="assets/Image-12.png" alt="imagem de festa diversas">Outro</label>
                             </div>
-
                         </div>
+
+                        <div class="style grid grid-auto-flow-col grid-1fr-2fr">
+                            <div>
+                                <label>Estilo</label>
+                                <div class="toggle-checkbox grid grid-auto-flow-col gap-12">
+                                    <div class="slider">
+                                        <input type="checkbox" name="light" id="light">
+                                        <label for="light" class="label-toggle"></label>
+                                    <div class="toggle-ball"></div>
+                                </div>
+                                <label for="light"></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Foto de Capa</label>
+                                <div class="upload-file grid grid-auto-flow-col">
+                                    <input type="file" id="cover-photo" name="cover-photo">
+                                    <div><label for="cover-photo"><img src="assets/icons/upload.svg" alt="">Selecionar</label></div>
+                                    <label for="cover-photo">Nenhum arquivo selecionado</label>
+                                </div>
+                            </div>
+
                     </div>
                 </fieldset>
             </form>
