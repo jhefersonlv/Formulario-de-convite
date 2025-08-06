@@ -16,6 +16,11 @@
             color: var(--input-placeholder);
         }
 
+        &:focus {
+            border-color: var(--brand-dark);
+            outline: none;
+        }
+
     }
 
     textarea {
@@ -247,15 +252,21 @@
 
 .upload-file {
     margin-top: .75rem;
+    display: flex;
+    gap: .75rem ;
 
     input {
         display: none;
     }
 
+    label {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
     div {
-       
-        display: grid;
-        grid-auto-flow: column;
+        
 
         label {
         width: 7.4375rem;
@@ -270,4 +281,93 @@
            
         }
     }
+}
+
+/* CONTATO */
+
+.contact::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../icons/contact.svg);
+    background-size: contain;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.contact-section {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--input-stroke);
+}
+
+/* Termos e condições */
+
+.checkbox-wrap {
+    
+    display: grid;
+    gap: .5rem;
+
+    div {
+        justify-content: start;
+        gap: .25rem ;
+
+        a {
+            color: var(--brand-light);
+            font-weight: 500;
+        }
+
+        input {
+            display: none;
+        }
+
+        .checkbox-button {
+            display: inline-block;
+            position: relative;
+            width: 1rem;
+            height: 1rem;
+            border-radius: .25rem;
+            border: 1px solid var(--input-stroke);
+            cursor: pointer;
+             transition: transform 0.3s ease;
+        }
+
+        input:checked + .checkbox-button {
+
+            border: 1px solid var(--brand-light);
+            background-image: url(../icons/checked.svg);
+            background-size: cover;
+        
+        }
+    }
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    font-weight: 600;
+    background-color: var(--brand-dark);
+    width: 11rem;
+    height: 3rem;
+    border-radius: .5rem;
+    border: none;
+    color: var(--txt-heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+}
+
+button:hover {
+    background-color: var(--brand-mid);
 }
